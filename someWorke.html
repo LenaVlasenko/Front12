@@ -5,6 +5,52 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Zagolovok</h1>
+
+
+
+<script>
+    /**
+     * Lesson 2
+     * @author Vlasenko Elena
+     */
+
+    //поздароваться с пользователем
+    let name =  prompt("ваше имя");
+    console.log ("Привет, " + name + "!")
+
+    //ваш возраст
+    let age = prompt('Сколько тебе лет?');
+    console.log(age)
+
+    //периметр квадрата
+    let x = prompt('ведите сторону квадрата в см');
+    x = x * 4
+    console.log(x)
+
+    //площадь окружности
+    let radius =  prompt('укажите радиус в см2');
+    const p = 3.14
+    S = p * radius**2
+    console.log(S)
+
+    //вычисление времени маршрута
+    let distance =  prompt('укажите растояние в км');
+    let drive =  prompt('укажите скорость в км/ч');
+    hour = distance / drive
+    console.log(hour)
+
+    //конвертер валют
+    let dollar =  prompt('укажите сумму в USA');
+    const evro =  1.13
+    valut = dollar / evro
+    console.log(valut)
+
+    //конвертер обьема памяти
+    let Gb =  prompt('укажите обьем памяти в Gb');
+    const Mb =  0.820
+    file = Gb / Mb
+    console.log(file)
+
+</script>
 </body>
 </html>
