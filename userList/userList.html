@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <ul id="lstUsers">
+
+    </ul>
+</div>
+
+
+<script>
+    let lstUsers = document.getElementById('lstUsers')
+    //нициализация масива
+    let users = []
+    //заталкивание в масив
+    users.push('root')
+    users.push('quest')
+    //функция которая будет выводить список пользователей
+    function renderUserList() {
+        for (let i =0; i < users.length; i++) {
+            let li = document.createElement('li')
+            li.innerText = users[i]
+            lstUsers.appendChild(li)
+        }
+    }
+    //вызову метод что б построить скписок пользователей
+    renderUserList()
+</script>
+</body>
+</html>
