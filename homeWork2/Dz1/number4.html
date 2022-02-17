@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number4</title>
+    <style>
+        .all{
+            margin: 20% 20%;
+        }
+        input#userNumber{
+            width: 300px;
+            padding: 10px;
+        }
+        input#btnCalc{
+            width: 200px;
+            padding: 10px;
+            background-color: cornflowerblue;
+        }
+        #result{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="all">
+    <form action="#" method="post" autocomplete="on">
+        <input type="number" id="userNumber">
+        <input type="button" id="btnCalc" value="высокосный / невысокосный">
+        <div id="result">
+
+        </div>
+    </form>
+</div>
+
+
+<script>
+
+    document.getElementById('btnCalc').onclick = function () {
+        let userNumber = document.getElementById('userNumber').value
+        let result = Boolean(userNumber % 4)
+        console.log(typeof (result))
+        document.getElementById('result').innerText = 'невысокосный: ' + result
+    }
+
+</script>
+</body>
+</html>
