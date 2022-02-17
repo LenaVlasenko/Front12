@@ -9,6 +9,10 @@
     <ul id="lstUsers">
 
     </ul>
+    <form id="frmAddUser">
+        <input type="text" id="txtUserName">
+        <input type="button" id="btnAddUser" value="+">
+    </form>
 </div>
 
 
@@ -19,6 +23,7 @@
     //заталкивание в масив
     users.push('root')
     users.push('quest')
+
     //функция которая будет выводить список пользователей
     function renderUserList() {
         for (let i =0; i < users.length; i++) {
@@ -29,6 +34,18 @@
     }
     //вызову метод что б построить скписок пользователей
     renderUserList()
+
+    document.getElementById('btnAddUser').onclick = function (){
+        users.push(document.getElementById("txtUserName").value)
+        lstUsers.innerHTML = ''
+        renderUserList()
+    }
+    document.getElementById("frmAddUser").onsubmit = function (){
+        event.preventDefault()
+        users.push(document.getElementById("txtUserName").value)
+        lstUsers.innerHTML = ''
+        renderUserList()
+    }
 </script>
 </body>
 </html>
